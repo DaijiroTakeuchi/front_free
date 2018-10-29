@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.retinaRule {
+    width: 1000px;
+    margin: 100px auto 0;
+    height: 200px;
+}
+
+.retinaRule__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.retinaImage {
+    width: 1000px;
+    margin: 100px auto 0;
+    p.retinaImage__discription {
+        text-align: center;
+    }
+    img.retinaImage__mainvisual {
+        margin: 30px auto 0;
+        display: block;
+    }
+}
