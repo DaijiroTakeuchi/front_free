@@ -1,4 +1,4 @@
-extends ./_extends/layout
+extends ../_extends/layout
 block head
 	title= meta.top.title
 	meta(name="description", content=meta.top.description)
@@ -8,9 +8,6 @@ block head
 	meta(property="og:type", content=meta.top.og_type)
 block contents
 	div.main
-		p これはフロントエンジニアのためのテンプレートです
-		a(href="srcset/responsive.html") Responsive/srcset<br>
-		a(href="srcset/retina.html") Retina/srcset
 block scripts
 	script(src="/libs/slick.min.js")
 	script(src="/libs/top.js")
