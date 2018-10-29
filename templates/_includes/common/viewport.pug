@@ -1,0 +1,15 @@
+script.
+	jQuery(function ($) {
+		var BREAK_POINT = 768,
+			FIXED_WIDTH = 1200;
+		$(window).on('resize', function () {
+			var $viewport = $('meta[name="viewport"]'),
+				windowWidth = window.innerWidth;
+
+			if (windowWidth <= FIXED_WIDTH && windowWidth >= BREAK_POINT) {
+				$viewport.attr('content', 'width=' + FIXED_WIDTH);
+			} else {
+				$viewport.attr('content', 'width=device-width');
+			}
+		})
+	});

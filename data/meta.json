@@ -1,0 +1,15 @@
+{
+  "common": {
+    "site_name": "",
+    "fb_app_id": "",
+    "og_image": "",
+    "url": ""
+  },
+  "top": {
+    "canonical": "/",
+    "title": "",
+    "description": "",
+    "og_title": "",
+    "og_type": "website"
+  }
+}

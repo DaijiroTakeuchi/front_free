@@ -1,0 +1,39 @@
+{
+  "name": "env_templates",
+  "version": "1.0.0",
+  "description": "環境構築テンプレート",
+  "scripts": {
+    "browser": "browser-sync start --config ./bs-config.js",
+    "build": "gulp build",
+    "watch": "gulp watch & npm run browser",
+    "heroku-postbuild": "gulp build"
+  },
+  "bugs": {
+    "email": ""
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "browser-sync": "^2.26.0",
+    "pug": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "normalize-scss": "^7.0.1",
+    "picturefill": "^3.0.3"
+  },
+  "private": true,
+  "engines": {
+    "node": "8.x",
+    "npm": ">5"
+  }
+}

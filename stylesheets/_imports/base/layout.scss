@@ -1,0 +1,26 @@
+// setting
+@import 'variables';
+@import 'mixin';
+
+// style
+.container {
+    @include mq-sp {
+        padding-top: 50px;
+    }
+}
+
+.inner_wide {
+    max-width: $width-main;
+    margin: 0 auto;
+    @include mq-sp-tab {
+        padding: 0 20px;
+    }
+}
+
+.inner {
+    max-width: $width-main-small;
+    margin: 0 auto;
+    @include mq-sp-tab {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,13 @@
+//* conposer.jsonとは
+//依存するパッケージを定義するためのファイル。
+//自分で作成するか、composer initで対話的に作成できる。
+
+//iniコマンドでは、Public RepositoryであるPackagistから依存パッケージを検索・選択することが出来る。
+
+{
+  "name": "",
+  "type": "project",
+  "require": {
+    "php": "^7.2"
+  }
+}

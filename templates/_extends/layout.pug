@@ -1,0 +1,27 @@
+doctype html
+html(lang="ja")
+	head
+		meta(charset="utf-8")
+		block head
+		meta(name="viewport", content="width=device-width")
+		meta(name="format-detection", content="telephone=no")
+		meta(property="og:site_name", content=meta.common.site_name)
+		meta(property="fb:app_id", content=meta.common.fb_app_id)
+		meta(property="og:image", content=meta.common.og_image)
+		meta(property="twitter:image", content=meta.common.og_image)
+		include ../_includes/common/gtm_header
+		link(rel="stylesheet", href="/css/common.css")
+		block styles
+		include ../_includes/common/adobe_header
+	body
+		include ../_includes/common/gtm_footer
+		div.container
+			include ../_includes/common/header
+			block contents
+			include ../_includes/common/footer
+		script(src="/libs/jquery-3.3.1.min.js")
+		include ../_includes/common/viewport
+		script(src="/libs/aos.js")
+		script(src="/js/app.js")
+		block scripts
+		include ../_includes/common/adobe_footer

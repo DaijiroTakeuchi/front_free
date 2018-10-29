@@ -1,0 +1,157 @@
+// setting
+@import 'variables';
+
+// clearfix
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+// image
+@mixin img-w100 {
+    img,
+    svg {
+        width: 100%;
+        height: auto;
+    }
+}
+@mixin img-mw100 {
+    img,
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// svg-icon
+@mixin svg-icon( $element: before, $width: 0px, $height: 0px, $file-name: '', $display: inline-block, $position: relative ) {
+    &:#{$element} {
+        content: '';
+        width: $width;
+        height: $height;
+        background: url( '#{$images}#{$file-name}.svg' ) no-repeat center center;
+        background-size: $width $height;
+        display: $display;
+        vertical-align: top;
+        position: $position;
+        top: 0;
+    }
+}
+
+// triangle
+@mixin triangle( $element: before, $bottom: 0px ) {
+    &:#{$element} {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 9px 11px 9px;
+        border-color: transparent transparent $color-navy transparent;
+        display: block;
+        position: absolute;
+        bottom: $bottom;
+        left: 50%;
+        margin-left: -9px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s 0.1s ease;
+    }
+}
+
+// line-arrow
+@mixin line-arrow {
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        width: 1px;
+        height: 12px;
+        background-color: $color-lightblue;
+        display: block;
+        position: absolute;
+        right: 28px;
+        transition: all 0.3s ease;
+    }
+    &:before {
+        top: 13px;
+        transform: rotate( -45deg );
+    }
+    &:after {
+        top: 21px;
+        transform: rotate( 45deg );
+    }
+}
+
+// hover-line
+@mixin hover-line {
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background: $color-darkblue;
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        z-index: 2;
+    }
+    &:after {
+        left: inherit;
+        right: 50%;
+    }
+    @include mq-pc {
+        &:before,
+        &:after {
+            transition: all 0.2s ease-in;
+        }
+        &:hover {
+            &:before,
+            &:after {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+// media query
+@mixin mq-sp {
+    @media only screen and ( max-width: $width-break-sp ) {
+        @content;
+    }
+}
+@mixin mq-sp-small {
+    @media only screen and ( max-width: $width-break-sp-small ) {
+        @content;
+    }
+}
+@mixin mq-tab-pc {
+    @media only screen and ( min-width: $width-break-tab ) {
+        @content;
+    }
+}
+@mixin mq-tab {
+    @media only screen and ( min-width: $width-break-tab ) and ( max-width: $width-break-tab-max ) {
+        @content;
+    }
+}
+@mixin mq-sp-tab {
+    @media only screen and ( max-width: $width-break-tab-max ) {
+        @content;
+    }
+}
+@mixin mq-pc {
+    @media only screen and ( min-width: $width-break-pc ) {
+        @content;
+    }
+}
+@mixin mq-pc-wide {
+    @media only screen and ( min-width: $width-main )  {
+        @content;
+    }
+}

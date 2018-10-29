@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&subset=japanese');
+
+@import '_imports/base/variables';
+@import '_imports/base/normalize';
+@import '_imports/base/add_normalize';
+@import '_imports/base/mixin';
+@import '_imports/base/base';
+@import '_imports/lib/slick';
+@import '_imports/lib/aos_core';
+@import '_imports/lib/aos_easing';
+@import '_imports/lib/aos_animations';
+@import '_imports/base/layout';
+
+@import '_imports/utility/u-utility';
+
+@import '_imports/pages/top';
+
+@import '_imports/test/test';
+
+@import '_imports/component/c-header';
+@import '_imports/component/c-footer';
+@import '_imports/component/c-button';
+@import '_imports/component/c-title';
+@import '_imports/component/c-locator';

@@ -1,0 +1,28 @@
+#タンバリン用
+
+#SetEnvIf X-Forwarded-For 118.238.212.102 admin # tambourine TOKYO
+#SetEnvIf X-Forwarded-For 222.228.221.98 admin # tambourine OSAKA
+#
+#<ifModule mod_rewrite.c>
+#	RewriteEngine On
+#	RewriteCond %{ENV:APP_ENV} ^heroku$
+#	RewriteCond %{SERVER_PORT} !^443$
+#	RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#	RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+#</ifModule>
+#
+#<RequireAny>
+#    Require expr %{ENV:APP_ENV} !~ /^heroku$/
+#
+#</RequireAny>
+#
+#<If "env('APP_ENV') = 'heroku'">
+#    <RequireAny>
+#        Require env admin
+#
+#        AuthType Basic
+#        AuthName "Password Required"
+#        AuthUserFile /app/.htpasswd
+#        Require valid-user
+#    </RequireAny>
+#</If>

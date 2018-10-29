@@ -1,0 +1,69 @@
+// setting
+@import '../base/variables';
+@import '../base/mixin';
+$root:  '.c-button01';
+
+// style
+#{$root} {
+    width: 300px;
+    box-shadow: 5px 8px 40px 0px rgba( $color-black, 0.2 );
+    &__inner {
+        background: $color-skyblue;
+        border: solid 1px $color-skyblue;
+        padding: 20px 10px;
+        font-size: 1.1rem;
+        line-height: 1;
+        color: $color-white;
+        text-align: center;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+        @include mq-pc {
+            &:hover {
+                background: $color-white;
+                text-decoration: none;
+                color: $color-skyblue;
+                #{$root} {
+                    &__icon {
+                        width: 30px;
+                        right: 5px;
+                        svg path {
+                            fill: $color-skyblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__icon {
+        width: 25px;
+        height: 7px;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -5px;
+        display: block;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        svg {
+            width: 51px;
+            height: 7px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.c-header__contact {
+    #{$root} {
+        width: auto;
+        box-shadow: none;
+        &__inner {
+            padding: 15px 0 15px 15px;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+    }
+}

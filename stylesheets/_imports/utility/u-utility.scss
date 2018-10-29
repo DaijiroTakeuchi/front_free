@@ -1,0 +1,205 @@
+// setting
+@import '../base/variables';
+@import '../base/mixin';
+
+// utility
+$spaceEndValue : 30;
+
+@for $i from 0 through $spaceEndValue {
+    .u-mt#{$i * 5} {
+        margin-top: ( 5 * $i / 2 ) + px !important;
+        @include mq-pc {
+            margin-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-mb#{$i * 5} {
+        margin-bottom: ( 5 * $i / 2 ) + px !important;
+        @include mq-pc {
+            margin-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pt#{$i * 5} {
+        padding-top: ( 5 * $i / 2 ) + px !important;
+        @include mq-pc {
+            padding-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pb#{$i * 5} {
+        padding-bottom: ( 5 * $i / 2 ) + px !important;
+        @include mq-pc {
+            padding-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+}
+
+@for $i from 0 through $spaceEndValue {
+    .u-mt#{$i * 5}-pc {
+        @include mq-pc {
+            margin-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-mb#{$i * 5}-pc {
+        @include mq-pc {
+            margin-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pt#{$i * 5}-pc {
+        @include mq-pc {
+            padding-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pb#{$i * 5}-pc {
+        padding-bottom: ( 5 * $i / 2 ) + px !important;
+        @include mq-pc {
+            padding-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+}
+
+@for $i from 0 through $spaceEndValue {
+    .u-mt#{$i * 5}-sptab {
+        @include mq-sp-tab {
+            margin-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-mb#{$i * 5}-sptab {
+        @include mq-sp-tab {
+            margin-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pt#{$i * 5}-sptab {
+        @include mq-sp-tab {
+            padding-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pb#{$i * 5}-sptab {
+        @include mq-sp-tab {
+            padding-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+}
+
+@for $i from 0 through $spaceEndValue {
+    .u-mt#{$i * 5}-sp {
+        @include mq-sp {
+            margin-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-mb#{$i * 5}-sp {
+        @include mq-sp {
+            margin-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pt#{$i * 5}-sp {
+        @include mq-sp {
+            padding-top: ( 5 * $i ) + px !important;
+        }
+    }
+    .u-pb#{$i * 5}-sp {
+        @include mq-sp {
+            padding-bottom: ( 5 * $i ) + px !important;
+        }
+    }
+}
+
+
+.u-valign-t { vertical-align: top !important; }
+.u-valign-m { vertical-align: middle !important; }
+.u-valign-b { vertical-align: bottom !important; }
+.u-talign-l { text-align: left !important; }
+.u-talign-c { text-align: center !important; }
+.u-talign-r { text-align: right !important; }
+
+.u-talign-l-sp {
+    @include mq-sp {
+        text-align: left !important;
+    }
+}
+
+.u-fs-ss { font-size: 0.8rem; }
+.u-fs-s  { font-size: 0.9rem; }
+.u-fs-l  { font-size: 1.1rem; }
+.u-fs-ll { font-size: 1.3rem; }
+
+.u-br-pc-wide {
+    display: none !important;
+    @include mq-pc-wide {
+        display: block !important;
+    }
+}
+.u-br-pc {
+    @include mq-sp-tab {
+        display: none !important;
+    }
+}
+.u-br-tab-pc {
+    @include mq-sp {
+        display: none !important;
+    }
+}
+.u-br-tab {
+    display: none !important;
+    @include mq-tab {
+        display: block !important;
+    }
+}
+.u-br-tab-small {
+    display: none !important;
+    @media only screen and ( min-width: $width-break-tab ) and ( max-width: 840px ) {
+        display: block !important;
+    }
+}
+.u-br-sp {
+    display: none !important;
+    @include mq-sp {
+        display: block !important;
+    }
+}
+
+.u-pc-wide-none {
+    @include mq-pc-wide {
+        display: none !important;
+    }
+}
+.u-pc-none {
+    @include mq-pc {
+        display: none !important;
+    }
+}
+.u-tab-pc-none {
+    @include mq-tab-pc {
+        display: none !important;
+    }
+}
+.u-tab-none {
+    @include mq-tab {
+        display: none !important;
+    }
+}
+.u-sp-none {
+    @include mq-sp {
+        display: none !important;
+    }
+}
+
+.u-list-disc {
+    margin-left: 20px;
+    li {
+        list-style-type: disc;
+        margin-top: 7px;
+        &:first-child {
+            margin-top: 0
+        }
+    }
+}
+
+.u-list-decimal {
+    margin-left: 25px;
+    li {
+        list-style-type: decimal;
+        margin-top: 7px;
+        &:first-child {
+            margin-top: 0
+        }
+    }
+}
