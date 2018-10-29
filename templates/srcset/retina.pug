@@ -7,7 +7,12 @@ block head
 	meta(property="og:title", content=meta.top.og_title)
 	meta(property="og:type", content=meta.top.og_type)
 block contents
-	div.main
+	div.retinaRule
+		h1.retinaRule__title css命名規則はSMACSS (Scalable and Modular Architecture for CSS)を使用します。
+		p.retinaRule__discription OOCSSとBEMSの発展形ともいえますが、CMACSSでは5つの性質に分けて考えます。<br>__B=Base__、__L=Layout__、__M=Module__、__S=State(状態)__、__T=Theme__。Layoutに関しては"l-"などの接頭辞を付けることが推奨されています。<br>BEMSと異なるのは、SMACCSではクラスごとに上記の「いずれか一つ」の性質を持つというルールがあります。
+	div.retinaImage
+		p.retinaImage__discription ここからはRetina対応のimg画像を表示できるようにします
+		img.retinaImage__mainvisual(src="../images/graph.png", srcset="./images/graph.png 1x ./images/graph@2x.png 2x", alt="Example image")
 block scripts
 	script(src="/libs/slick.min.js")
 	script(src="/libs/top.js")
