@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.media {
+    margin: 100px auto 100px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    .mediaNavItem-active {
+        color: red;
+    }
+
+    .mediaBodyItem {
+        display: none;
+    }
+    .mediaBodyItem-active {
+        display: block;
+    }
+}
