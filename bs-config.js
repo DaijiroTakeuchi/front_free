@@ -29,8 +29,7 @@ const pugMiddleWare = (req, res, next) => {
                 compileDebug: true,
                 doctype: 'html',
                 meta: require('./data/meta'),
-
-                revision: ''
+                // top_info: require('./data/top-information')
             });
 
             console.log('[BS] response sent.');
