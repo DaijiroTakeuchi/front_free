@@ -15,3 +15,12 @@ $('.mediaNavItem').on('click', function() {
     var index = $(this).data('media');
     $('.mediaBodyItem[data-media=' + index + ']').addClass('mediaBodyItem-active');
 });
+
+var para = document.querySelector('p');
+
+para.addEventListener('click' , updateName);
+
+function updateName() {
+    var name = prompt('名前を入力してください');
+    para.textContent = 'Player 1:' + name;
+}
