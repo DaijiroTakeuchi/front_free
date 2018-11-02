@@ -1,0 +1,17 @@
+extends ./_extends/layout
+block head
+	title= meta.top.title
+	meta(name="description", content=meta.top.description)
+	meta(property="og:description", content=meta.top.description)
+	link(rel="canonical", href=meta.common.url + meta.top.canonical)
+	meta(property="og:title", content=meta.top.og_title)
+	meta(property="og:type", content=meta.top.og_type)
+block contents
+	div.svg
+		p これはsvgデータを使用するためのページです
+
+
+	//include _includes/pages/information
+block scripts
+	script(src="/libs/slick.min.js")
+	script(src="/libs/top.js")
