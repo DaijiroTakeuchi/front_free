@@ -2,10 +2,11 @@
 
 .svg {
     width: 1000px;
-    height: 500px;
+    height: 300px;
     margin: 0 auto 500px;
     border: 1px solid #0086D9;
-    background-color: #666666;
+    background-color: cadetblue;
+    position: relative;
     span.allowsvg {
         width: 100px;
     }
@@ -22,16 +23,14 @@
 
 #svg {
     height: 300px;
-    position: relative;
 }
 
 .button__icon {
     width: 25px;
     height: 7px;
     position: absolute;
-    top: 70%;
-    right: 50%;
-    margin-top: -5px;
+    top: 20%;
+    right: 68%;
     display: block;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -45,9 +44,9 @@
     }
     &:hover {
         width: 100px;
-        right: 45%;
+        right: 64%;
         svg path {
-            fill: $color-skyblue;
+            fill: orange;
         }
     }
 }
