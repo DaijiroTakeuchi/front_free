@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.svg {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto 500px;
+    border: 1px solid #0086D9;
+    background-color: #666666;
+    span.allowsvg {
+        width: 100px;
+    }
+}
+
+.svgspan {
+    display: block;
+    width: 200px;
+}
+
+.blue {
+    fill: #0086D9;
+}
+
+#svg {
+    height: 300px;
+    position: relative;
+}
+
+.button__icon {
+    width: 25px;
+    height: 7px;
+    position: absolute;
+    top: 70%;
+    right: 50%;
+    margin-top: -5px;
+    display: block;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    svg {
+        width: 51px;
+        height: 7px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.3s ease;
+    }
+    &:hover {
+        width: 100px;
+        right: 45%;
+        svg path {
+            fill: $color-skyblue;
+        }
+    }
+}
