@@ -24,3 +24,31 @@ function updateName() {
     var name = prompt('名前を入力してください');
     para.textContent = 'Player 1:' + name;
 }
+
+// snap.svgを使用したアニメーション
+
+var $circle = Snap( '.circle1' );
+
+function anim () {
+
+    // cx の値を 0 にリセット
+    $circle.attr( { cx: 0 } );
+
+    // cx の値を 5 秒かけて 1000 にアニメーションする
+    $circle.animate( {
+        cx: 1000
+    }, 5000, function () {
+        anim();
+    } );
+
+};
+
+anim();
+
+
+var $allow = Snap('.allow');
+
+$($allow).animate({"marginLeft":"100px"},2000,"swing", function() {
+
+    $(this).addClass('blue');
+})
