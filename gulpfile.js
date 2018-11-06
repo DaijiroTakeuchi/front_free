@@ -46,6 +46,14 @@ gulp.task('scss', () => {
         .pipe(gulp.dest('./public/css/'));
 });
 
+// //js圧縮
+// gulp.tasl("js", () => {
+//     return gulp.src(['./public/libs/*.js'])
+//         .pipe(plumber())
+//         .pipe(please(PLEEEASE_OPTION))
+//         .pipe(gulp.dest('./public/js/common.js/'));
+// });
+
 // ビルド用
 gulp.task('build', ['pug', 'scss']);
 
