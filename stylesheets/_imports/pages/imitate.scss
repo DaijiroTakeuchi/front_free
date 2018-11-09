@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.imitate {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+video::-webkit-media-controls {
+    display:none !important;
+}
