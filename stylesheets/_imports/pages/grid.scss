@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.grid-variable__2columns {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    @include mq-sp {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-main {
+    background: #fcc;
+}
+
+.grid-side {
+    background: #fea;
+    display: block;
+}
+
+.grid-main,.grid-side {
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.grid-variableFixation__2columns {
+    margin-top: 100px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr minmax(400px,1fr);
+    @include mq-sp {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-variable__3columns {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 100px;
+    .grid-main {
+        order: 2;
+    }
+    .grid-side {
+        order: 3;
+    }
+    .grid-list {
+        background: #afd;
+        order: 1;
+        padding: 2%;
+        border-radius: 10px;
+    }
+    @include mq-sp {
+        grid-template-columns: 1fr;
+        .grid-main,.grid-side,.grid-list {
+            order: 0;
+        }
+    }
+}
+
+.grid-multiColumns__tile {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 200px);
+    margin-top: 100px;
+}
+
+.grid-item {
+    border-radius: 10px;
+    background: #edf;
+    padding: 15px;
+    text-align: center;
+}
+
+.grid-multiColumns__tileVariable {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    margin-top: 100px;
+}
+
+.grid-multiColumns__tileResponsive {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 100px;
+}

@@ -1,0 +1,97 @@
+extends ../_extends/layout
+block head
+	title= meta.top.title
+	meta(name="description", content=meta.top.description)
+	meta(property="og:description", content=meta.top.description)
+	link(rel="canonical", href=meta.common.url + meta.top.canonical)
+	meta(property="og:title", content=meta.top.og_title)
+	meta(property="og:type", content=meta.top.og_type)
+block contents
+	div.grid-variable__2columns
+		article.grid-main
+			h1 gridレイアウト
+			p CSS Gridで可変2カラムグリッドレイアウトAnd he went back to meet the fox. "Goodbye," he said. "Goodbye," said the fox. "And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye." "What is essential is invisible to the eye," the little prince
+		section.grid-side
+			h1 gridレイアウト~small~
+			p CSS Gridで可変2カラムグリッドレイアウト~small~And he went back to meet the fox. "Goodbye," he said. "Goodbye," said the fox. "And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye." "What is essential is invisible to the eye," the little prince
+	div.grid-variableFixation__2columns
+		article.grid-main
+			h1 gridレイアウト
+			p CSS Gridで可変2カラムグリッドレイアウトAnd he went back to meet the fox. "Goodbye," he said. "Goodbye," said the fox. "And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye." "What is essential is invisible to the eye," the little prince
+		section.grid-side
+			h1 gridレイアウト。400pxより小さくなることはない。レスポンシブになると上と同じ挙動になる。
+			p CSS Gridで可変2カラムグリッドレイアウト~small~And he went back to meet the fox. "Goodbye," he said. "Goodbye," said the fox. "And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye." "What is essential is invisible to the eye," the little prince
+	div.grid-variable__3columns
+		article.grid-main
+			h1 gridレイアウト
+			p CSS Gridで可変2カラムグリッドレイアウトAnd he went back to meet the fox. "Goodbye," he said. "Goodbye," said the fox. "And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye." "What is essential is invisible to the eye," the little prince
+		section.grid-side
+			h1 gridレイアウト~small~
+			p CSS Gridで可変2カラムグリッドレイアウト~small~
+		section.grid-list
+			h1 gridレイアウト。わざと左側に寄せています。cssでorderを利用しています。
+			ul
+				li story
+				li about
+				li contact
+	div.grid-multiColumns__tile
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変なしで四つ並べています。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変なしで四つ並べています。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変なしで四つ並べています。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変なしで四つ並べています。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変なしで四つ並べています。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変なしで四つ並べています。
+	div.grid-multiColumns__tileVariable
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+	div.grid-multiColumns__tileResponsive
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+		div.grid-item
+			img(src="http://placehold.it/240x150" alt="/")
+			p マルチカラムレイアウトです。可変ありで200px以上は可変します。
+	//include _includes/pages/information
+block scripts
+	script(src="/libs/slick.min.js")
+	script(src="/libs/top.js")

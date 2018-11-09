@@ -1,9 +1,26 @@
 @charset "UTF-8";
 
+.svg-main {
+    width: 1000px;
+    margin: 0 auto;
+    p {
+        text-align: center;
+        font-weight: 400px;
+        font-size: 36px;
+        line-height: 1.5;
+    }
+    a {
+        display: block;
+        text-align: center;
+        font-weight: 400px;
+        font-size: 36px;
+        line-height: 1.5;
+    }
+}
+
 .svg {
     width: 1000px;
-    height: 300px;
-    margin: 0 auto 500px;
+    margin: 0 auto;
     border: 1px solid #0086D9;
     background-color: cadetblue;
     position: relative;
@@ -23,6 +40,13 @@
 
 #svg {
     height: 300px;
+}
+
+.svg-game {
+    height: 80px;
+    margin: 100px auto 0;
+    width: 1000px;
+    text-align: center;
 }
 
 .button__icon {
@@ -47,6 +71,69 @@
         right: 64%;
         svg path {
             fill: orange;
+        }
+    }
+}
+
+.btn {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn:hover .base {
+    fill: #0ba;
+}
+.btn-text {
+    font: 26px 'Hiragino Maru Gothic Pro','ヒラギノ丸ゴ Pro W4','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO', sans-serif;
+    fill: #fff;
+}
+
+.svg-line {
+    width: 1000px;
+    height: 300px;
+    margin: 100px auto;
+    text-align: center;
+    span {
+        display: block;
+        margin: 20px 0;
+    }
+}
+
+.svg-line1 {
+    stroke: #f7c;
+}
+
+.svg-line2 {
+    stroke-width: 1cm;
+    stroke: #09d
+}
+
+.svg-line3 {
+    stroke-width: 10px;
+    stroke-opacity: 0.1;
+    stroke: red;
+}
+
+.svg-line4 {
+    fill: none;
+    stroke: #09d;
+    stroke-width: 3;
+    stroke-dasharray: 1000;
+    //破線の開始位置を変更
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 5s linear;
+    animation: dash 4s linear;
+    @-webkit-keyframes dash {
+        to {
+            //stroke-dashoffset: 1000;
+            stroke-dashoffset: 0;
+        }
+    }
+    @keyframes dash {
+        to {
+            //stroke-dashoffset: 1000;
+            stroke-dashoffset: 0;
         }
     }
 }

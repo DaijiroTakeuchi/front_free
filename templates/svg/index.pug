@@ -7,13 +7,26 @@ block head
 	meta(property="og:title", content=meta.top.og_title)
 	meta(property="og:type", content=meta.top.og_type)
 block contents
-	div.main
+	div.svg-main
 		p これはsvgデータを使用するためのページです
+		a(href="https://www.webcreatorbox.com/tech/svg-stroke" target="blank") 参考URL
 	div.svg
 		span.button__icon
 			include ../_includes/svg/arrow_slide.svg
 		span
 			include ../_includes/svg/test.svg
+	div.svg-game
+		span
+			include ../_includes/svg/game.svg
+	div.svg-line
+		span.svg-line1
+			include ../_includes/svg/stroke_pink.svg
+		span.svg-line2
+			include ../_includes/svg/stroke_width.svg
+		span.svg-line3
+			include ../_includes/svg/stroke_opacity.svg
+		span.svg-line4
+			include ../_includes/svg/house.svg
 
 	//include _includes/pages/information
 block scripts
