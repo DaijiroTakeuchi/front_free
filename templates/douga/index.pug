@@ -1,0 +1,17 @@
+extends ../_extends/layout
+block head
+	title= meta.top.title
+	meta(name="description", content=meta.top.description)
+	meta(property="og:description", content=meta.top.description)
+	link(rel="canonical", href=meta.common.url + meta.top.canonical)
+	meta(property="og:title", content=meta.top.og_title)
+	meta(property="og:type", content=meta.top.og_type)
+block contents
+	div.douga
+		p HTML5のvideoタグによる動画再生
+		iframe(width="560" height="315" src="https://www.youtube.com/embed/lwolyOIcCQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+		video(controls autoplay="auto" width="320" height="240")
+			source(src="../movie/waterfall.mp4" type="video/mp4")
+		p 動画を再生するには、videoタグをサポートしたブラウザが必要です。
+block scripts
+	script(src="/libs/top.js")
