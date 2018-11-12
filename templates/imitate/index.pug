@@ -7,11 +7,17 @@ block head
 	meta(property="og:title", content=meta.top.og_title)
 	meta(property="og:type", content=meta.top.og_type)
 block contents
+	a.imitate-title(href="https://www.msichicago.org/" target="blank") Nature Is Very Nice
 	div.imitate
-		p HTML5のvideoタグによる動画再生
-		video(controls autoplay="auto" width="320" height="240")
+		video(controls autoplay="auto" width="100%" loop)
 			source(src="../movie/waterfall.mp4" type="video/mp4")
-		p 動画を再生するには、videoタグをサポートしたブラウザが必要です。
+	div.imitate-container
+		div.imitate-containerChild
+	div.imitate-container
+		div.imitate-containerChild
+	div.imitate-container
+		div.imitate-containerChild
+
 block scripts
 	script(src="/libs/slick.min.js")
 	script(src="/libs/top.js")

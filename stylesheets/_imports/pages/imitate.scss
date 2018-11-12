@@ -1,11 +1,39 @@
 @charset "UTF-8";
 
+.imitate-title {
+    font-family: serif;
+    color: #fff;
+    font-size: 400%;
+    position: absolute;
+    left: 30%;
+    top: 300px;
+    z-index: 1;
+}
+
 .imitate {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    //opacity: .6;
+    position: relative;
 }
+
+
 
 video::-webkit-media-controls {
     display:none !important;
+}
+
+.imitate-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 6fr 2fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.imitate-containerChild {
+    background-color: #0086D9;
 }
