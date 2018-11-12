@@ -8,6 +8,8 @@ header {
 .head {
     @include clearfix;
     height: 100px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .h-logo {
