@@ -1,29 +1,59 @@
 /* 基本のスタイル */
 
-.delight-test {
-    text-align: center;
-    margin: 0 auto;
-    height: 1000px;
-    p {
-        margin-top: 1000px;
-    }
-}
-
-.delight-test.delighter {
-    transition: all .3s ease-out;
+.deli.delighter {
+    transition: all .9s ease-out;
     transform: translateX(-100%);
     opacity: 0;
 }
 
 /* スタート時のスタイル */
-.delight-test.delighter.started {
+.deli.delighter.started {
     transform: none;
     opacity: 1;
 }
 
-/* エンド時のスタイル */
-.delight-test.delighter.started.ended {
-    border: solid red 10px;
+///* エンド時のスタイル */
+//.deli.delighter.started.ended {
+//    border: solid red 10px;
+//}
+
+.delili.delighter {
+    transition: all .9s ease-out;
+    transform: translateX(100%);
+    opacity: 0;
 }
 
+.delili.delighter.started {
+    transform: none;
+    opacity: 1;
+}
 
+.delilili.delighter {
+    transition: all .9s ease-out;
+    transform: translate(20%, -120%);
+    opacity: 0;
+}
+
+.delilili.delighter.started {
+    transform: none;
+    opacity: 1;
+}
+
+//---------------------------------------------------------------------
+/* ここからテスト記述 */
+
+.de-test {
+    height: 1000px;
+    width: 100%;
+    background: #0aba58;
+}
+
+.box {
+    position: relative;
+    width: 50%;
+    height: 30vh;
+    background-color: #ec484d;
+    margin: 10px auto;
+    color: #FFFFFF;
+    padding: 10px;
+}

@@ -7,8 +7,13 @@ block head
 	meta(property="og:title", content=meta.top.og_title)
 	meta(property="og:type", content=meta.top.og_type)
 block contents
-
+	div.de-test
+	div.deli-wrap
+		div.deli(data-delighter="start:0.8")
+			div.box 1.Include
+		div.delili(data-delighter="start:0.5")
+			div.box 2.Include
+		div.delilili(data-delighter="start:0.5")
+			div.box 3.Include
 block scripts
-	script(src="/libs/slick.min.js")
 	script(src="/libs/delighters.min.js")
-	//script(src="/libs/top.js")
