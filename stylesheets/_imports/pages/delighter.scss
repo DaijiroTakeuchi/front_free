@@ -1,0 +1,29 @@
+/* 基本のスタイル */
+
+.delight-test {
+    text-align: center;
+    margin: 0 auto;
+    height: 1000px;
+    p {
+        margin-top: 1000px;
+    }
+}
+
+.delight-test.delighter {
+    transition: all .3s ease-out;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* スタート時のスタイル */
+.delight-test.delighter.started {
+    transform: none;
+    opacity: 1;
+}
+
+/* エンド時のスタイル */
+.delight-test.delighter.started.ended {
+    border: solid red 10px;
+}
+
+
