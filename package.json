@@ -15,7 +15,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "browser-sync": "^2.26.0",
-    "pug": "^2.0.3"
+    "pug": "^3.0.1"
   },
   "repository": {
     "type": "git",
